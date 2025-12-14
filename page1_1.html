@@ -205,7 +205,7 @@
                 for (i in Ingredience){
                     
                     let unit= String(Ingredience[i]).replace(parseInt(Ingredience[i]),"")
-                    if (parseInt(Ingredience[i]) == Number((Ingredience[i]).replace(unit,""))) {
+                    if (parseInt(Ingredience[i]) == Number(String(Ingredience[i]).replace(unit,""))) {
                         console.log(parseInt(Ingredience[i]), unit,Portion)
                         IngredienceCall.value=(IngredienceCall.value)+(i+":"+(Number(parseInt(Ingredience[i]))*Portion)+unit)+"\n";
                     } else {
