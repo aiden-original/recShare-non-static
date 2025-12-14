@@ -214,17 +214,11 @@
                     console.log("unit", unit)
                     
                     console.log("the replace",String(Ingredience[i]).replace(unit,""))
-                    if (parseFloat(Ingredience[i]) == Number(String(Ingredience[i]).replace(unit,""))) {
-                        console.log("float ing",parseFloat(Ingredience[i]),"unit", unit,"portion",Portion)
-                        IngredienceCall.value=(IngredienceCall.value)+(i+":"+(Number(parseFloat(Ingredience[i]))*Portion)+unit)+"\n";
+                    
+                    console.log("float ing",parseFloat(Ingredience[i]),"unit", unit,"portion",Portion)
+                    IngredienceCall.value=(IngredienceCall.value)+(i+":"+(Number(parseFloat(Ingredience[i]))*Portion)+unit)+"\n";
                         
-                    } else {
-
-                        console.log("int ing",parseInt(Ingredience[i]),"portion",Portion)
-                        IngredienceCall.value=(IngredienceCall.value)+(i+":"+(Number(parseInt(Ingredience[i]))*Portion)+unit)+"\n";
-                        
-                        
-                    }
+                    
                     console.log("-------------------------------------------------")
                 }
             }
