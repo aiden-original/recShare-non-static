@@ -201,6 +201,7 @@
                 Portion=Portion/MaxPortion;
                  console.log(MaxPortion,"MaxPortion");
                 IngredienceCall.value="";
+                console.log("-------------------------------------------------")
                 console.log(Ingredience,"Ingredience");
                 console.log("-------------------------------------------------")
                 for (i in Ingredience){
@@ -209,10 +210,10 @@
                     if (parseInt(Ingredience[i]) == Number(String(Ingredience[i]).replace(unit,""))) {
                         console.log("int ing",parseInt(Ingredience[i]),"unit", unit,"portion",Portion)
                         
-                        IngredienceCall.value=(i+":"+(Number(parseInt(Ingredience[i]))*Portion)+unit)+"\n";
+                        IngredienceCall.value=(IngredienceCall.value)+(i+":"+(Number(parseInt(Ingredience[i]))*Portion)+unit)+"\n";
                     } else {
                         console.log("float ing",parseFloat(Ingredience[i]),"unit", unit,"portion",Portion)
-                        IngredienceCall.value=(i+":"+(Number(parseFloat(Ingredience[i]))*Portion)+unit)+"\n";
+                        IngredienceCall.value=(IngredienceCall.value)+(i+":"+(Number(parseFloat(Ingredience[i]))*Portion)+unit)+"\n";
                         
                     }
                     
