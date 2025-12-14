@@ -202,17 +202,20 @@
                  console.log(MaxPortion,"MaxPortion");
                 IngredienceCall.value="";
                 console.log(Ingredience,"Ingredience");
+                console.log("-------------------------------------------------")
                 for (i in Ingredience){
-                    
+                    console.log("i",i)
                     let unit= String(Ingredience[i]).replace(parseInt(Ingredience[i]),"")
                     if (parseInt(Ingredience[i]) == Number(String(Ingredience[i]).replace(unit,""))) {
-                        console.log(parseInt(Ingredience[i]), unit,Portion)
-                        IngredienceCall.value=(IngredienceCall.value)+(i+":"+(Number(parseInt(Ingredience[i]))*Portion)+unit)+"\n";
+                        console.log("int ing",parseInt(Ingredience[i]),"unit", unit,"portion",Portion)
+                        
+                        IngredienceCall.value=(i+":"+(Number(parseInt(Ingredience[i]))*Portion)+unit)+"\n";
                     } else {
-                        console.log(parseFloat(Ingredience[i]), unit,Portion)
-                        IngredienceCall.value=(IngredienceCall.value)+(i+":"+(Number(parseFloat(Ingredience[i]))*Portion)+unit)+"\n";
+                        console.log("float ing",parseFloat(Ingredience[i]),"unit", unit,"portion",Portion)
+                        IngredienceCall.value=(i+":"+(Number(parseFloat(Ingredience[i]))*Portion)+unit)+"\n";
                         
                     }
+                    
                 }
             }
              RecipeById2()
